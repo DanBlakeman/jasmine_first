@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="src/FizzBuzz.js"></script>
   </head>
     <body>
-      <script>
-      fizzbuzz = new FizzBuzz();
-      for (i=1; i < 10000; i++) {
-        document.write(fizzbuzz.result(i));
-        document.write("<br>")
-      };
-      </script>
+      <div id="fizzy">
+        <script>
+          var iteration = 1
+          fizzbuzz = new FizzBuzz();
+          var fizzbuzzy = function(){
+            if(iteration > 10) return
+            document.write(fizzbuzz.result(iteration));
+            document.write("<br>");
+            ++iteration;
+          };
+            setInterval(function() { fizzbuzzy() }, 100);
+        </script>
+      </div>
     </body>
 </html>
