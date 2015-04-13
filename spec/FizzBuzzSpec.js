@@ -21,5 +21,10 @@ describe("FizzBuzz",function() {
     expect(fizzbuzz.result(3)).not.toBe(3)
     expect(fizzbuzz.result(15)).not.toBe(15)
   });
+  it("returns fizzbuzz if num is divisble by 15", function() {
+    expect(fizzbuzz.result(15)).toBe("fizzbuzz")
+    expect(fizzbuzz.result(75)).toBe("fizzbuzz")
+    expect(fizzbuzz.result(76)).not.toBe("fizzbuzz")
+  });
 });
 
